@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        MovieCollection myCollection = new MovieCollection();
+        Controller controller = new Controller();
 
         System.out.println("Welcome to your movie collection! Type 1 or 2 to choose one of below two options.");
         System.out.println("1. Add a movie to your list");
@@ -34,7 +34,7 @@ public class Main {
             System.out.println("Movie genre:");
             String genre = scanner.next();
 
-            myCollection.addMovie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
+            controller.addMovie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
 
             System.out.println("Movie successfully added to your movie collection.");
             System.out.println();
@@ -47,6 +47,7 @@ public class Main {
 
             if (programState == 2) {
                 scanner.close();
+
             }
         }
     }
