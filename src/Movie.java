@@ -39,4 +39,11 @@ public class Movie {
     public String getGenre() {
         return genre;
     }
+
+    public String toString() {
+        String isInColorAsString = isInColor ? "yes" : "no";
+        String result = "";
+        result += "Movie title: " + title + "\n" + "Director: " + director + "\n" + "Release year: " + yearCreated + "\n" + "Is the movie in color: " + isInColorAsString + "\n" + "Length (minutes): " + lengthInMinutes + "\n" + "Genre: " + genre + "\n";
+        return result;
+    }
 }

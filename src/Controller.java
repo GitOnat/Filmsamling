@@ -1,20 +1,26 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Controller {
+    private MovieCollection movieCollection;
 
-    private List<Movie> movieCollection;
 
     public Controller() {
-        this.movieCollection = new ArrayList<>();
+        this.movieCollection = new MovieCollection();
     }
 
-    public List<Movie> getMovieCollection() {
+    public MovieCollection getMovieCollection() {
         return movieCollection;
     }
 
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lengthInMinutes, String genre) {
-        Movie movie = new Movie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
-        movieCollection.add(movie);
+        movieCollection.addMovie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
+    }
+
+    public void showList() {
+        movieCollection.showList();
+    }
+
+    public void searchMovie(String searchMovieTitle) {
+        movieCollection.searchMovie(searchMovieTitle);
     }
 }
